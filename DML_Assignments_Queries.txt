@@ -1,0 +1,46 @@
+ASSIGNMENT ON DML STATEMENTS:-
+
+1. WAQT hike sal of employee by 10% if he is working as Manager.
+     update emp
+     set sal = sal + (sal*0.1)
+     where job = 'MANAGER';
+
+2. WAQT update the sal to double their salary if he is working as Manager.
+    update emp
+    set sal = sal*2
+    where job = 'MANAGER';
+
+3. Change the name of SMITH TO SMIITH.
+   
+   update emp
+   set ename = 'SMIITH'
+   where ename = 'SMITH' 
+
+4. WAQT Modify the job of KIng to 'PRSIDENT'.
+
+   update emp
+   set job = 'PRESIDENT'
+   WHERE ENAME = 'KING';
+
+5. WAQT Change the name of allen to 'ALEN MORGAN'.
+   
+   update emp
+   set ename = 'ALEN MORGAN'
+   WHERE ENAME = 'ALLEN';
+      
+   
+
+6. WAQT hike sal of employee by 10% if Employee erans 2000 as a salesman.
+     update emp
+     set sal = sal + (sal*0.1)
+     where job = 'SALESMAN' AND SAL < 2000;
+
+7.WAQT TO DELETE THE EMPLOYEE WHO DONT EARN COMMISSION.
+     delete from emp
+     where comm is null or sal comm = 0;
+
+8.WAQ to remove all the employees hireed before 1987 in dept 20.
+     delete from emp
+     where hiredate < '01-JAN-1987' and deptno = 20;
+
+9.Differentiate b/w truncate and delete statements.    	
