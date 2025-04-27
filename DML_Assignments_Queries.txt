@@ -43,4 +43,19 @@ ASSIGNMENT ON DML STATEMENTS:-
      delete from emp
      where hiredate < '01-JAN-1987' and deptno = 20;
 
-9.Differentiate b/w truncate and delete statements.    	
+9.Differentiate b/w truncate and delete statements.   
+
+Feature	            DELETE	                               TRUNCATE	                                              DROP
+Purpose	         Removes specific rows	             Removes all rows	                               Removes the entire table
+WHERE Clause	   Can use WHERE to filter rows	       Cannot use WHERE; affects all rows	               Not applicable
+Rollback (Undo)   Possible (if inside transaction)	Possible (in some databases) but tricky	           Not possible after commit
+Speed	           Slower (row-by-row)	             Faster (deallocates pages)	                     Fastest (removes structure)
+Triggers             Activates triggers	                   Does not activate triggers	                Does not activate triggers
+Activation	   
+Locks Used	       Row-level locks	                   Table-level locks	                             Table-level locks
+Resets Identity         No                                 Yes (in some databases like SQL Server)            Not applicable
+Column			
+Structure after      Table remains                          Table remains	                                   Table is deleted
+Command		
+Can Recover Data	Yes (if transaction rollback)      	No (mostly irreversible)                 	     No (irreversible)
+
